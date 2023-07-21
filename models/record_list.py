@@ -6,3 +6,6 @@ records = [
     Record("I Want You For Myself", "Dennis Rowland", "Boogie", "7\""),
     Record("Mais Que Um Momento", "Emilio Santiago", "Latin", "LP")
 ]
+
+def add_new_media(media):
+    records.append(media)
