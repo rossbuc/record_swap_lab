@@ -5,8 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Media to go here!</h1>
+    <section class="records">
+        {% for record in record_list %}
+        <div class="records-entry">
+            <h1>{{ record.title }}</h1>
+            <h2>{{ record.artist }}</h2>
+            <h2>{{ record.genre }}</h2>
+            <h3>{{ record.format }}</h3>
+        </div>
+        {% endfor %}
+    </section>
+    
 </body>
 </html>

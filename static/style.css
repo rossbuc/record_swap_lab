@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.records-entry {
+    border: 2px solid navy;
+}
+
+.records {
+    display: flex;
+    flex-wrap: wrap;
+}
