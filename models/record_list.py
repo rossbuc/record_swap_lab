@@ -9,3 +9,6 @@ records = [
 
 def add_new_media(media):
     records.append(media)
+
+def delete_media(media):
+    [records.remove(record) for record in records if record.title == media]

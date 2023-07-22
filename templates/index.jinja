@@ -23,6 +23,13 @@
             <input type="submit" value="Add Media">
         </form>
     </div>
+    <div class="delete-record">
+        <form action="/records/delete/<index>" method="POST">
+            <label for="title_to_delete">Which title would you like to delete?</label>
+            <input type="text" name="title_to_delete" id="title_to_delete">
+            <input type="submit" value="Delete Media">
+        </form>
+    </div>
     <section class="records">
         {% for record in record_list %}
         <div class="records-entry">
