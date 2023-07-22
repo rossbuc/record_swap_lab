@@ -11,3 +11,8 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.header-logo {
+    height: 64px;
+    width: auto;
+}

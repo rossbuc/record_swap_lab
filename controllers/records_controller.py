@@ -18,7 +18,7 @@ def add_record():
     record_artist = request.form['artist']
     record_genre = request.form['genre']
     record_format = request.form['format']
-    record_to_add = Record(record_title, record_artist, record_genre, record_format)
+    record_to_add = Record(record_title, record_artist, record_genre, record_format, False)
     add_new_media(record_to_add)
     return redirect('/records')
 
