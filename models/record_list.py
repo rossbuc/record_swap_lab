@@ -14,3 +14,8 @@ def add_new_media(media):
 
 def delete_media(media):
     [records.remove(record) for record in records if record.title == media]
+
+def update_media(media, change):
+    for record in records:
+        if record.title == media:
+            record.checked_out = change

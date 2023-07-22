@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request, redirect
-from models.record_list import records, Record, add_new_media, delete_media
+from models.record_list import records, Record, add_new_media, delete_media, update_media
 
 records_blueprint = Blueprint("records", __name__)
 
@@ -26,4 +26,13 @@ def add_record():
 def delete_record(index):
     record_title_to_delete = request.form['title_to_delete']
     delete_media(record_title_to_delete)
+    return redirect('/records')
+
+@records_blueprint.route('/records/update/<name>', methods=['POST'])
+def update_record(name):
+    button_response = request.form['button-update']
+    if button_response == "True":
+        update_media(name, True)
+    elif button_response == "False":
+        update_media(name, False)
     return redirect('/records')

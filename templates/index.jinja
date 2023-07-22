@@ -43,6 +43,13 @@
             {% else %}
                 <p>Available</p>
             {% endif %}
+            <form action="/records/update/{{ record.title }}" method="POST">
+                <label for="button-check_in">Return</label>
+                <input type="radio" id="button-check_in" name="button-update" value="False">
+                <label for="button-check_out">Check Out</label>
+                <input type="radio" name="button-update" id="button-check_out" value="True">
+                <input type="submit" value="update_media">
+            </form>
         </div>
         {% endfor %}
     </section>
