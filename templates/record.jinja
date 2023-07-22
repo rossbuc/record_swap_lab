@@ -14,6 +14,11 @@
         <h2>{{ record.artist }}</h2>
         <h2>{{ record.genre }}</h2>
         <h3>{{ record.format }}</h3>
+        {% if record.checked_out %}
+            <h3>This record is checked out</h3>
+        {% else %}
+            <h3>This record is available</h3>
+        {% endif %}
     </div>
 </body>
 </html>

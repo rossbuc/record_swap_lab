@@ -30,6 +30,7 @@
             <input type="submit" value="Delete Media">
         </form>
     </div>
+    </div>
     <section class="records">
         {% for record in record_list %}
         <div class="records-entry">
@@ -37,6 +38,11 @@
             <h2>{{ record.artist }}</h2>
             <h2>{{ record.genre }}</h2>
             <h3>{{ record.format }}</h3>
+            {% if record.checked_out %}
+                <p>Checked Out</p>
+            {% else %}
+                <p>Available</p>
+            {% endif %}
         </div>
         {% endfor %}
     </section>

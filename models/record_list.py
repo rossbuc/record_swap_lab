@@ -1,10 +1,12 @@
+from operator import truediv
+from re import T
 from models.record import Record
 
 records = [
-    Record("How High", "Cogniac", "Disco", "12\""),
-    Record("I'm So Glad", "Earnie Burnside", "Gospel", "12\""),
-    Record("I Want You For Myself", "Dennis Rowland", "Boogie", "7\""),
-    Record("Mais Que Um Momento", "Emilio Santiago", "Latin", "LP")
+    Record("How High", "Cogniac", "Disco", "12\"", True),
+    Record("I'm So Glad", "Earnie Burnside", "Gospel", "12\"", False),
+    Record("I Want You For Myself", "Dennis Rowland", "Boogie", "7\"", False),
+    Record("Mais Que Um Momento", "Emilio Santiago", "Latin", "LP", True)
 ]
 
 def add_new_media(media):
