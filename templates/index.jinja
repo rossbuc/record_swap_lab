@@ -2,7 +2,7 @@
     
     <h1>Records</h1>
     <hr>
-    <div class="add-record">
+    <div class="add-record" id="add-media-form">
         <form action="/records" method="POST">
             <label for="title">Title</label>
             <input type="text" name="title" id="title">
@@ -15,7 +15,7 @@
             <input type="submit" value="Add Media">
         </form>
     </div>
-    <div class="delete-record">
+    <div class="delete-record" id="delete-media-form">
         <form action="/records/delete/<index>" method="POST">
             <label for="title_to_delete">Which title would you like to delete?</label>
             <input type="text" name="title_to_delete" id="title_to_delete">

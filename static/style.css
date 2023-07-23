@@ -16,3 +16,11 @@
     height: 64px;
     width: auto;
 }
+
+#add-media-form {
+    display: none;
+}
+
+#delete-media-form {
+    display: none;
+}
