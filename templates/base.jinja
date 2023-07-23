@@ -8,27 +8,25 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <header>
-        <div>
-        <a href="/records">Record Roullette</a>
-        <p>Record Roullette</p>
-        <img src="/Users/rossbuchan/codeclan_work/week_03/weekend_hw/record_swap_lab/img/—Pngtree—vinyl record disc_4766722.png" alt="Record image">
+    <header class="header">
+        <div class="header-title-logo">
         <img src="https://www.discogs.com/release/1651065-Joy-I-Need-Your-Love/image/SW1hZ2U6MjQ0OTk5Mg==?ev=item-vcg" alt="">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/12in-Vinyl-LP-Record-Angle.jpg/800px-12in-Vinyl-LP-Record-Angle.jpg" alt="Record Image" class="header-logo">
+        <a href="/records"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/12in-Vinyl-LP-Record-Angle.jpg/800px-12in-Vinyl-LP-Record-Angle.jpg" alt="Record Image" class="header-logo"></a>
+        <a href="/records" class="header-title"><p>Record Roullette</p></a>
         </div>
-        <div>
-            <button class="button-add-media" onclick="displayAddForm('add-media-form')">Add Media</button>
-            <button class="button-delete-media" onclick="displayDeleteForm('delete-media-form')">Delete Media</button>
+        <div class="buttons">
+            <div class="div-add-button"><button class="button" id="button-add-media" onclick="displayAddForm('add-media-form')">Add Media</button></div>
+            <div class="div-delete-button"><button class="button" id="button-delete-media" onclick="displayDeleteForm('delete-media-form')">Delete Media</button></div>
         </div>
     </header>
 
     <script>
         function displayAddForm(id) {
-            document.getElementById(id).style.display = "block"
+            document.getElementById(id).style.display = "inline-block"
         }
 
         function displayDeleteForm(id) {
-            document.getElementById(id).style.display = "block"
+            document.getElementById(id).style.display = "inline-block"
         }
     </script>
     

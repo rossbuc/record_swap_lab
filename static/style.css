@@ -1,20 +1,63 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.records-entry {
-    border: 2px solid navy;
-}
+/* -------- Header Styling -------- */
 
-.records {
+.header {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: solid 5px black;
+    padding: 0px 10px;
+    background-color: #EAE7DC;
+    height: 90px;
 }
 
 .header-logo {
     height: 64px;
     width: auto;
+}
+
+.header-title {
+    width: 128px;
+    height: 64px;
+    font-size: 32px;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    padding-left: 10px;
+    color: #e8594fda;
+}
+
+.header-title-logo {
+    display: flex;
+    align-items: center;
+    margin: auto 0px;
+}
+
+.div-add-button {
+    border-left: 2px solid #e8594fda;
+    border-right: 2px solid #e8594fda;
+}
+
+.div-delete-button {
+    border-right: 2px solid #e8594fda;
+}
+
+.buttons {
+    display: flex;
+    height: 100%;
+}
+
+.button {
+    height: 100%;
+    width: 128px;
+    background-color: #e98074b4;
+    color: #EAE7DC;
+    border: 0px;
 }
 
 #add-media-form {
@@ -23,4 +66,15 @@
 
 #delete-media-form {
     display: none;
+}
+
+/* -------- Index Styling -------- */
+
+.records-entry {
+    border: 2px solid navy;
+}
+
+.records {
+    display: flex;
+    flex-wrap: wrap;
 }
