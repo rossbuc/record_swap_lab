@@ -10,6 +10,8 @@
             <input type="text" name="genre" id="genre">
             <label for="format">Format</label>
             <input type="text" name="format" id="format">
+            <label for="artwork">Artwork</label>
+            <input type="text" name="artwork" id="artwork">
             <input type="submit" value="Add Media">
         </form>
     </div>
@@ -24,22 +26,25 @@
     <section class="records">
         {% for record in record_list %}
         <div class="records-entry">
-            <h1><a href="/records/{{ record.title }}">{{ record.title }}</a></h1>
-            <h2>{{ record.artist }}</h2>
-            <h2>{{ record.genre }}</h2>
-            <h3>{{ record.format }}</h3>
-            {% if record.checked_out %}
-                <p>Checked Out</p>
-            {% else %}
-                <p>Available</p>
-            {% endif %}
-            <form action="/records/update/{{ record.title }}" method="POST">
-                <label for="button-check_in">Return</label>
-                <input type="radio" id="button-check_in" name="button-update" value="False">
-                <label for="button-check_out">Check Out</label>
-                <input type="radio" name="button-update" id="button-check_out" value="True">
-                <input type="submit" value="update_media">
-            </form>
+            <img src="{{ record.artwork }}" alt="Media Artwork" class="record-entry-artwork">
+            <div>
+                <h1><a href="/records/{{ record.title }}">{{ record.title }}</a></h1>
+                <h2>{{ record.artist }}</h2>
+                <h2>{{ record.genre }}</h2>
+                <h3>{{ record.format }}</h3>
+                {% if record.checked_out %}
+                    <p>Checked Out</p>
+                {% else %}
+                    <p>Available</p>
+                {% endif %}
+                <form action="/records/update/{{ record.title }}" method="POST">
+                    <label for="button-check_in">Return</label>
+                    <input type="radio" id="button-check_in" name="button-update" value="False">
+                    <label for="button-check_out">Check Out</label>
+                    <input type="radio" name="button-update" id="button-check_out" value="True">
+                    <input type="submit" value="update_media">
+                </form>
+            </div>
         </div>
         {% endfor %}
     </section>
